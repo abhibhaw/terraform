@@ -10,7 +10,6 @@ terraform {
 }
 
 provider "google" {
-  project     = var.project_id
-  region      = var.region
-  credentials = file("terraform-sa-key.json")
+  project = var.project_id
+  region  = var.region
 }
