@@ -7,6 +7,11 @@ terraform {
       version = "~> 5.0"
     }
   }
+
+  backend "gcs" {
+    bucket = "torchcompass-tfstate"
+    prefix = "gke"
+  }
 }
 
 provider "google" {
